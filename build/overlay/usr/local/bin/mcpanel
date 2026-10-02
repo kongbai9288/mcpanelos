@@ -1,0 +1,6 @@
+#!/bin/sh
+export PYTHONPATH=/opt/mcpanel${PYTHONPATH:+:$PYTHONPATH}
+export MCPANEL_HOME=/var/lib/mcpanel
+export MCPANEL_SERVERS=/srv/minecraft
+cd /opt/mcpanel
+exec python3 -m mcpanel "$@"

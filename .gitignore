@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.iso
+*.tar.gz
+dist/
+build/exe/
+build/chroot/
+mcpanel.spec
+secret.enc
+secret.key
+
+build/mcpanel.spec

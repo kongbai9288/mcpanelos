@@ -1,0 +1,17 @@
+[Unit]
+Description=MC Server Panel
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/mcpanel
+Environment=PYTHONPATH=/opt/mcpanel
+Environment=MCPANEL_HOME=/var/lib/mcpanel
+Environment=MCPANEL_SERVERS=/srv/minecraft
+ExecStart=/usr/bin/python3 -m mcpanel serve --port 8850
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
